@@ -1,5 +1,4 @@
 const getApiData = () => {
-  console.log("Obteniendo datos de la Api");
   return fetch("http://hp-api.herokuapp.com/api/characters")
     .then((response) => response.json())
     .then((data) => {
@@ -7,11 +6,12 @@ const getApiData = () => {
         return {
           name: character.name,
           image: character.image,
+          id: character.patronus,
           house: character.house,
           ancestry: character.ancestry,
-          id: character.patronus,
         };
       });
+      console.log(cleanData);
       return cleanData;
     });
 };
