@@ -1,0 +1,13 @@
+.cards {
+  display: grid;
+  grid-column: 1fr;
+  text-align: center;
+}
+
+@media all and (min-width: 768px) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

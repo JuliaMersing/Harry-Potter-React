@@ -6,12 +6,11 @@ const getApiData = () => {
         return {
           name: character.name,
           image: character.image,
-          id: character.patronus,
+          id: character.actor,
           house: character.house,
           ancestry: character.ancestry,
         };
       });
-      console.log(cleanData);
       return cleanData;
     });
 };
