@@ -11,6 +11,7 @@ const getApiData = () => {
           ancestry: character.ancestry,
         };
       });
+      console.log(cleanData);
       return cleanData;
     });
 };
