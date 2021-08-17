@@ -1,4 +1,5 @@
 import React from "react";
+import "../../stylesheet/Filters/OtherFilters.scss";
 
 const FilterHouse = (props) => {
   const handelChange = (ev) => {
@@ -23,7 +24,7 @@ const FilterHouse = (props) => {
         <option value="Gryffindor">Gryffindor</option>
         <option value="Slytherin">Slytherin</option>
         <option value="Hufflepuff">Hufflepuff</option>
-        <option value="Hufflepuff">Ravenclaw</option>
+        <option value="Ravenclaw">Ravenclaw</option>
         <option value="">No House</option>
       </select>
     </>

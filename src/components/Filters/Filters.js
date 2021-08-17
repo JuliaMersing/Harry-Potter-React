@@ -2,6 +2,7 @@ import React from "react";
 import FilterName from "./FilterName";
 import FilterHouse from "./FilterHouse";
 import FilterAncestry from "./FilterAncestry";
+import "../../stylesheet/Filters/Filters.scss";
 
 const Filters = (props) => {
   return (

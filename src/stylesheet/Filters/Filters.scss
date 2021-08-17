@@ -1,0 +1,10 @@
+.form__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media all and (min-width: 768px) {
+    flex-direction: row;
+    margin-bottom: 10px;
+  }
+}

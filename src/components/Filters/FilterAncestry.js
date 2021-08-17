@@ -1,4 +1,5 @@
 import React from "react";
+import "../../stylesheet/Filters/OtherFilters.scss";
 
 const FilterAncestry = (props) => {
   const handelChange = (ev) => {

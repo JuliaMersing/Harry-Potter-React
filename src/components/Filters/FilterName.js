@@ -1,7 +1,8 @@
 import React from "react";
+import "../../stylesheet/Filters/FilterName.scss";
 
 const FilterName = (props) => {
-  const handelChange = (ev) => {
+  const handleChange = (ev) => {
     props.handleFilter({
       value: ev.target.value,
       key: "name",
@@ -14,10 +15,10 @@ const FilterName = (props) => {
         type="text"
         className="form__input"
         name="name"
-        id="id"
+        id="name"
         placeholder="Filter by name"
         value={props.filterName}
-        onChange={handelChange}
+        onChange={handleChange}
       />
     </>
   );

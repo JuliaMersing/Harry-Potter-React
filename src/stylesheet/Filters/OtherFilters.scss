@@ -1,0 +1,39 @@
+@import "../Core/variables.scss";
+
+.form {
+  &__label {
+    color: $color-detail;
+    font-size: 25px;
+    background-color: $color-background;
+    margin-right: 10px;
+
+    @media all and (min-width: 768px) {
+      text-align: right;
+    }
+  }
+
+  &__select {
+    width: 200px;
+    height: 40px;
+    background: $color-background;
+    color: $color-icon;
+    border: 1px solid $color-detail;
+    border-radius: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @media all and (min-width: 768px) {
+      width: 150px;
+      margin-right: 20px;
+      align-content: initial;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+
+  @media all and (min-width: 768px) {
+    display: inline-flex;
+  }
+}
