@@ -1,5 +1,5 @@
 const getApiData = () => {
-  return fetch("http://hp-api.herokuapp.com/api/characters")
+  return fetch("https://hp-api.herokuapp.com/api/characters")
     .then((response) => response.json())
     .then((data) => {
       const cleanData = data.map((character) => {
@@ -9,6 +9,8 @@ const getApiData = () => {
           id: character.actor,
           house: character.house,
           ancestry: character.ancestry,
+          patronus: character.patronus,
+          birth: character.dateOfBirth,
         };
       });
       console.log(cleanData);

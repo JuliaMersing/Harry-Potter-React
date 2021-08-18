@@ -5,7 +5,7 @@ const FilterAncestry = (props) => {
   const handelChange = (ev) => {
     props.handleFilter({
       value: ev.target.value,
-      key: "house",
+      key: "ancestry",
     });
   };
   return (

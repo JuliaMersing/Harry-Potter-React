@@ -1,5 +1,5 @@
 import React from "react";
-import Character from "../Characters/Character";
+import Character from "../Characters/CharacterCard";
 import "../../stylesheet/Characters/CharactersList.scss";
 
 const CharactersList = (props) => {

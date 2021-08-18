@@ -8,7 +8,6 @@ import FilterAncestry from "./Filters/FilterAncestry";
 import ls from "../services/LocalStorage";
 import NotFound from "../components/NotFound/NotFound";
 
-
 const App = () => {
   const [characters, setCharacters] = useState(ls.get("characters", []));
   const [filterName, setFilterName] = useState(ls.get("filterName", ""));
@@ -69,7 +68,7 @@ const App = () => {
   const handleReset = () => {
     setCharacters(characters);
     setFilterName("");
-    setFilterHouse("all");
+    setFilterHouse("All");
     setFilterAncestry("All");
   };
 
