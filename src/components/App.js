@@ -8,6 +8,7 @@ import FilterAncestry from "./Filters/FilterAncestry";
 import ls from "../services/LocalStorage";
 import NotFound from "../components/NotFound/NotFound";
 
+
 const App = () => {
   const [characters, setCharacters] = useState(ls.get("characters", []));
   const [filterName, setFilterName] = useState(ls.get("filterName", ""));
@@ -65,6 +66,13 @@ const App = () => {
       }
     });
 
+  const handleReset = () => {
+    setCharacters(characters);
+    setFilterName("");
+    setFilterHouse("all");
+    setFilterAncestry("All");
+  };
+
   return (
     <div className="page">
       <img className="logo" src={Logo} alt="Logo" />
@@ -73,6 +81,7 @@ const App = () => {
         filterSpecies={filterHouse}
         filterGender={FilterAncestry}
         handleFilter={handleFilter}
+        handleReset={handleReset}
       />
       <ul>
         {filteredCharacters.length > 0 ? (

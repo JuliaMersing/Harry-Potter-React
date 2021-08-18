@@ -3,6 +3,7 @@ import FilterName from "./FilterName";
 import FilterHouse from "./FilterHouse";
 import FilterAncestry from "./FilterAncestry";
 import "../../stylesheet/Filters/Filters.scss";
+import Reset from "../../services/Reset";
 
 const Filters = (props) => {
   return (
@@ -20,6 +21,7 @@ const Filters = (props) => {
           filterGender={props.filterAncestry}
           handleFilter={props.handleFilter}
         />
+        <Reset handleReset={props.handleReset} />
       </form>
     </section>
   );
