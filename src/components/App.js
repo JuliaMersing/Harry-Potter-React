@@ -72,7 +72,7 @@ const App = () => {
     const routeCharacterId = props.match.params.characterId;
 
     const foundCharacter = characters.find((character) => {
-      return character.id === parseInt(routeCharacterId);
+      return character.id.toLowerCase() === routeCharacterId.toLowerCase();
     });
     if (foundCharacter !== undefined) {
       return <Character character={foundCharacter} />;
