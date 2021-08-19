@@ -7,6 +7,9 @@ import Filters from "../components/Filters/Filters";
 import FilterAncestry from "./Filters/FilterAncestry";
 import ls from "../services/LocalStorage";
 import NotFound from "../components/NotFound/NotFound";
+import PageNotFound from "../components/NotFound/PageNotFound";
+import Character from "../components/Characters/Character";
+import { Route, Switch } from "react-router-dom";
 
 const App = () => {
   const [characters, setCharacters] = useState(ls.get("characters", []));
@@ -65,6 +68,17 @@ const App = () => {
       }
     });
 
+  const renderCharacter = (props) => {
+    const routeCharacterId = props.match.params.characterId;
+
+    const foundCharacter = characters.find((character) => {
+      return character.id === parseInt(routeCharacterId);
+    });
+    if (foundCharacter !== undefined) {
+      return <Character character={foundCharacter} />;
+    }
+  };
+
   const handleReset = () => {
     setCharacters(characters);
     setFilterName("");
@@ -75,20 +89,30 @@ const App = () => {
   return (
     <div className="page">
       <img className="logo" src={Logo} alt="Logo" />
-      <Filters
-        filterName={filterName}
-        filterSpecies={filterHouse}
-        filterGender={FilterAncestry}
-        handleFilter={handleFilter}
-        handleReset={handleReset}
-      />
-      <ul>
-        {filteredCharacters.length > 0 ? (
-          <CharactersList characters={filteredCharacters} />
-        ) : (
-          <NotFound />
-        )}
-      </ul>
+      <Switch>
+        <Route exact path="/">
+          <div>
+            <Filters
+              filterName={filterName}
+              filterSpecies={filterHouse}
+              filterGender={FilterAncestry}
+              handleFilter={handleFilter}
+              handleReset={handleReset}
+            />
+            <ul>
+              {filteredCharacters.length > 0 ? (
+                <CharactersList characters={filteredCharacters} />
+              ) : (
+                <NotFound />
+              )}
+            </ul>
+          </div>
+        </Route>
+        <Route path="/character/:characterId" render={renderCharacter} />
+        <Route>
+          <PageNotFound />
+        </Route>
+      </Switch>
     </div>
   );
 };
