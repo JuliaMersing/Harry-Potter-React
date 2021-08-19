@@ -11,7 +11,7 @@ function PageNotFound() {
         alt="This page doesn't exist"
       />
       <Link to="/">
-        <i className="home_icon fas fa-reply" />
+        <span className="home_icon">👈🏻</span>
       </Link>
     </div>
   );

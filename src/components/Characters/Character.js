@@ -27,7 +27,7 @@ const Character = (props) => {
 
   const renderBirth = () => {
     if (props.character.birth === "") {
-      return <span>Missing information, such as Voldemort's nose 👃🏻</span>;
+      return <span>Missing information, same as Voldemort's nose 👃🏻</span>;
     } else if (props.character.birth !== "") {
       return <span>{props.character.birth}</span>;
     }
@@ -42,7 +42,10 @@ const Character = (props) => {
           alt={props.character.name}
         />
         <div className="characterDetails">
-          <h4 className="characterDetailsName"> {props.character.name}</h4>
+          <h4 className="characterDetailsName">
+            {" "}
+            ⚡️{props.character.name}⚡️
+          </h4>
           <ul>
             <li>House: {props.character.house}</li>
             <li>Ancestry: {renderAncestry()}</li>

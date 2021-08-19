@@ -1,5 +1,11 @@
 @import "../Core/variables.scss";
 
+.logo {
+  height: 100px;
+  width: 150px;
+  padding-top: 20px;
+}
+
 .SingleCharacter {
   display: flex;
   flex-direction: column;
@@ -13,11 +19,10 @@
 }
 
 .singleCharacterCard {
-  margin-bottom: 20px;
   color: $color-icon;
   display: flex;
   align-items: center;
-  height: 350px;
+  height: 300px;
   width: 550px;
 }
 .imageCharacter {
@@ -30,7 +35,6 @@
 }
 
 .characterDetails {
-  padding-right: 10px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
