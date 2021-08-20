@@ -15,21 +15,38 @@
 
 .characterDetailsName {
   margin-bottom: 50px;
-  font-size: 40px;
+  font-size: 30px;
+}
+
+@media all and (min-width: 768px) {
+  .characterDetailsName {
+    font-size: 40px;
+  }
 }
 
 .singleCharacterCard {
   color: $color-icon;
   display: flex;
   align-items: center;
-  height: 300px;
-  width: 550px;
+  height: 200px;
+  width: 350px;
+  margin-bottom: 50px;
 }
+
+@media all and (min-width: 768px) {
+  .singleCharacterCard {
+    height: 300px;
+    width: 550px;
+    margin-bottom: 30px;
+  }
+}
+
 .imageCharacter {
   height: 250px;
   border-radius: 25px;
   margin-right: 30px;
 }
+
 .link {
   color: $color-icon;
 }
