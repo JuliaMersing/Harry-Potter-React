@@ -14,9 +14,9 @@ import { Route, Switch } from "react-router-dom";
 const App = () => {
   const [characters, setCharacters] = useState(ls.get("characters", []));
   const [filterName, setFilterName] = useState(ls.get("filterName", ""));
-  const [filterHouse, setFilterHouse] = useState(ls.get("filterHouse", ""));
+  const [filterHouse, setFilterHouse] = useState(ls.get("filterHouse", "All"));
   const [filterAncestry, setFilterAncestry] = useState(
-    ls.get("filterAncestry", "")
+    ls.get("filterAncestry", "All")
   );
 
   useEffect(() => {

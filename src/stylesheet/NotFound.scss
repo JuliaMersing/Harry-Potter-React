@@ -9,11 +9,11 @@
 }
 
 .notfound_img {
-  width: 300px;
-  height: 200px;
+  width: 18.75rem;
+  height: 12.5rem;
   align-content: center;
-  margin-top: 25px;
-  margin-bottom: 20px;
+  margin-top: 1.56rem;
+  margin-bottom: 1.25rem;
 }
 
 .home_icon {
@@ -22,7 +22,7 @@
   padding: 0.5rem;
   border: 1px solid $color-icon;
   color: $color-icon;
-  margin-top: 20px;
+  margin-top: 1.25rem;
   &:hover {
     background-color: $color-hover;
   }
