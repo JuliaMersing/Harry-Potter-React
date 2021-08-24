@@ -1,6 +1,6 @@
 # ⚡️Harry Potter⚡️
 
-This project was built using React. The goal was to create a Rick & Morty's character finder through an API.
+This project was built using React. The goal was to create a Harry Potter character finder through an API.
 
 You can also click on any given character card to find more info about it.
 
